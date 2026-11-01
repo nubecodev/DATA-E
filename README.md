@@ -1,6 +1,6 @@
 # DATA-E | Python, Pandas y automatización de datos
 
-Bienvenido/a al proyecto de Ética Empresarial y Responsabilidad Social en donde nuestro objetivo es ayudar a **DATA-E**. Este es un proyecto educativo gratuito con lecciones y ejercicios prácticos para aprender a trabajar con archivos Excel mediante Python y Pandas.
+Bienvenido/a al proyecto del ramo de Responsabilidad Social Empresarial y Ética Laboral en donde nuestro objetivo es ayudar a **DATA-E**. Este es un proyecto educativo gratuito con lecciones y ejercicios prácticos para aprender a trabajar con archivos Excel mediante Python: Pandas, OpenPyXL, NumPy.
 
 Está pensado para personas que están comenzando a programar: puedes descargar los ejemplos, ejecutarlos y modificarlos en tu propio computador mientras aprendes.
 
@@ -12,15 +12,30 @@ Facilitar el aprendizaje, paso a paso, de herramientas de análisis y automatiza
 
 ```text
 DATA-E/
-├── Leccion_uno/
+├── data/
 │   ├── estudiantes_practica_30.xlsx
-│   └── leccion_1.py
+├── leccion_01/
+│   ├── leccion_01_pdf.pdf
+│   └── leccion_01.py
+├── leccion_02/
+│   ├── leccion_02_filtrar_archivo_real.py
+│   ├── leccion_02_pdf.pdf
+│   └── reporte_filtrado_data_e.xlsx
+├── Instalacion_Entorno_Trabajo_DATA_E.pdf
 ├── LICENSE-CODE.md
 ├── LICENSE-CONTENT.md
 └── README.md
 ```
 
 **Lección 1 — Lectura de archivos Excel con Pandas:** utilizarás el archivo `estudiantes_practica_30.xlsx` para cargar datos con `pd.read_excel()` y visualizar registros, por ejemplo con `df.head()` y `df.tail()`.
+
+### Lección 2 — Búsqueda y filtrado de datos con Pandas
+En esta lección aprenderás a extraer información precisa de tus DataFrames aplicando filtros lógicos y métodos avanzados de Pandas:
+* **Filtrado por condiciones múltiples (`&`):** Para combinar criterios como estado y promedio mínimo.
+* **Búsqueda por listas (`.isin()`):** Ideal para filtrar múltiples categorías (ej. Psicología o Derecho).
+* **Búsqueda de texto (`.str.contains()`):** Para localizar patrones o nombres específicos (ej. "ana") sin distinguir mayúsculas.
+* **Control de calidad de datos:** Detección de valores faltantes (`.isna()`) y registros duplicados (`duplicated()`).
+* **Exportación profesional:** Creación de un reporte multipestaña con `pd.ExcelWriter` y formato personalizado usando `openpyxl`.
 
 > La estructura se ampliará a medida que se publiquen nuevas lecciones. Los archivos de licencia indicados arriba deben incorporarse a la raíz del repositorio.
 

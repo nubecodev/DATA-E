@@ -6,11 +6,17 @@ from pathlib import Path
 # Isidora Cortes Cataldo
 # Ingeniería en Informática
 
-# 1. Ubicar el archivo Excel
-carpeta = Path(__file__).parent
-archivo = carpeta / "estudiantes_practica_30.xlsx"
+# 1. OBTENER LA RUTA DEL ARCHIVO
+# __file__ representa el archivo Python actual.
+# parent.parent permite llegar a la carpeta DATA-E.
+
+carpeta = Path(__file__).resolve().parent.parent
+archivo = carpeta / "data" / "estudiantes_practica_30.xlsx"
 
 # 2. Leer el archivo Excel
+# read_excel() carga los datos en un DataFrame.
+# sheet_name indica la hoja que queremos leer.
+
 df = pd.read_excel(
     archivo,
     sheet_name="Estudiantes"
@@ -18,11 +24,11 @@ df = pd.read_excel(
 
 # 3. Mostrar los primeros 5 estudiantes
 print("\n--- PRIMEROS 5 ESTUDIANTES ---")
-print(df.head())
+print(df.head().to_string(index=False))
 
 # 4. Mostrar los ultimos 5 estudiantes
 print("\n--- ULTIMOS 5 ESTUDIANTES ---")
-print(df.tail())
+print(df.tail().to_string(index=False))
 
 # 5. Mostrar la cantidad de filas y columnas
 print("\n--- DIMENSIONES DEL EXCEL ---")
